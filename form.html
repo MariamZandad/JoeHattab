@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Hattab/form</title>
+
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+        body{
+            background-image: url(pics/back.jpg.png);
+            height: 100vh;
+            background-position: top;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .form-contenuto{
+            width: 100%;
+            max-width: 650px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+           
+           
+        }
+
+        .questinario{
+           color: whitesmoke;
+           position: relative;
+           padding: 40px;
+           
+           
+        }
+
+        .titolo{
+            font-size: 5vmin;
+            font-weight: bold;
+            color: rgb(219, 129, 12);
+           
+            
+        }
+
+        label{
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .in-put{
+            border-radius: 3px;
+            border-style: none;
+            padding: 7px;
+        }
+
+        .invia{
+            background: rgb(219, 129, 12);
+            color: whitesmoke;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border-style: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .invia:hover{
+            background: rgb(229, 229, 229);
+            color: rgb(219, 129, 12);
+            transition: 0.4s;
+        }
+
+        .invia:active{
+            opacity: 0.5;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="form-contenuto">
+        <form action="https://api.web3forms.com/submit" method="POST" class="questinario">
+            <div class="titolo">
+                <h2>la tua opinione</h2><br>
+                <hr>
+            </div>
+            
+            <input type="hidden" name="access_key" value="c5d684df-4f3d-40cd-8f99-36df478bf33c">
+            <br>
+            <label for="nome">Nome:</label>
+            &nbsp; &nbsp;
+            <input type="text" class="in-put" name="nome" placeholder="la tua risposta"><br><br>
+
+            <label for="age">Sesso:</label>
+            &nbsp;&nbsp;
+            <input type="radio" class="in-put" name="gender"><a>F</a>
+            &nbsp;  &nbsp;
+            <input type="radio" class="in-put" name="gender"><a>M</a><br><br>
+
+            <label for="age">L'età:</label>
+            &nbsp; &nbsp;
+            <input type="radio" class="in-put" name="age"><a>10-25 anni</a>
+            &nbsp;  &nbsp;
+            <input type="radio" class="in-put" name="age"><a>25-50 anni</a>
+            &nbsp; &nbsp;
+            <input type="radio" class="in-put" name="age"><a>più di 50 anni</a><br><br>
+
+            <label for="country">Paese:</label>
+            &nbsp; &nbsp;
+            <input type="text" class="in-put" name="paese" placeholder="la tua risposta"><br><br>
+
+            <label for="age">Ti è piacciuto il contenuto?</label>
+            &nbsp; &nbsp;
+            <input type="radio" class="in-put" name="yes-no"><a>Sì</a>
+            &nbsp; &nbsp;
+            <input type="radio" class="in-put" name="yes-no"><a>No</a><br><br>
+
+            <label for="nome">La tua opinione su questo influencer :</label><br><br>
+            <textarea class="in-put" name="messaggio" placeholder="il tuo messaggio"></textarea><br><br>
+
+            <input class="invia" type="submit" value="Invia">
+
+        </form>
+
+    </div>
+</body>
+</html>
